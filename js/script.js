@@ -50,7 +50,6 @@ function generateCrosswords() {
       let crosswords_copy = JSON.parse(JSON.stringify(crosswords)) // Cópia do array (palavras cruzadas) para verificar disponibilidades
       let horizontal_size = crosswords[0].length
       let [ vertical_position, horizontal_position ] = Number(obj.crossword_letter_position / horizontal_size).toFixed(2).toString().split('.')
-      // horizontal_position = parseInt(horizontal_position * Number(`0.${horizontal_size}`))
       horizontal_position = parseInt((horizontal_position / 10) * Number(horizontal_size))
 
       let scores = {
